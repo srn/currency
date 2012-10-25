@@ -1,5 +1,7 @@
 # currency.js
 
+Simple currency conversion in the terminal
+
 ## Installation
 
 ```npm install currency -g```
