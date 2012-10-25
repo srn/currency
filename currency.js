@@ -21,7 +21,7 @@ requirejs(['http', 'commander', 'money'], function (http, commander, money) {
     money.rates = data.rates;
 
     commander
-        .version('0.0.1');
+        .version('0.0.4');
 
     commander
         .command('* <currency> * [from] * [to]')

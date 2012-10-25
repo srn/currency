@@ -1,6 +1,6 @@
 {
   "name": "currency",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "simple currency conversion in the terminal",
   "keywords": [
     "currency",
