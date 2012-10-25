@@ -4,11 +4,11 @@ Simple currency conversion in the terminal
 
 ## Installation
 
-```npm install currency -g```
+```$ npm install currency -g```
 
 ## Usage
 ```
-currency 10 USD DKK
+$ currency 10 USD DKK
 => 57.54916
 ```
 
