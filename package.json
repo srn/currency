@@ -1,6 +1,6 @@
 {
   "name": "currency",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "simple currency conversion in the terminal",
   "bin": {
     "currency": "./bin/currency"
@@ -16,5 +16,12 @@
     "url": "http://srn.io"
   },
   "main": "currency.js",
-  "readme": "readme.md"
+  "readme": "readme.md",
+  "engines": {
+    "node": ">=0.6.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soerenr/currency.js.git"
+  }
 }
