@@ -1,0 +1,20 @@
+{
+  "name": "currency",
+  "version": "0.0.1",
+  "description": "simple currency conversion in the terminal",
+  "bin": {
+    "currency": "./bin/currency"
+  },
+  "dependencies": {
+    "commander": "1.0.5",
+    "money": "0.1.3",
+    "requirejs": "2.1.1"
+  },
+  "author": {
+    "name": "Soren Brokaer",
+    "email": "root@srn.io",
+    "url": "http://srn.io"
+  },
+  "main": "currency.js",
+  "readme": "readme.md"
+}
