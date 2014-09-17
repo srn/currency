@@ -3,7 +3,7 @@ var requirejs = require('requirejs').config({nodeRequire:require, baseUrl:''});
 requirejs(['http', 'commander', 'money'], function (http, commander, money) {
   var options = {
     host: 'openexchangerates.org',
-    path: '/api/latest.json?app_id=89d56115f20d40d7a898ee00e282a04f'
+    path: '/api/latest.json?app_id=9c3a9fa4d4b7415e95880e677db3d080'
   };
 
   var data = '';
