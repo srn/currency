@@ -9,6 +9,7 @@
     "rates",
     "convert"
   ],
+  "license": "MIT",
   "bin": {
     "currency": "./bin/currency"
   },

@@ -34,3 +34,7 @@ $ currency --help
 
     => 57.75516
 ```
+
+## License
+
+MIT © [Søren Brokær](http://srn.io)
