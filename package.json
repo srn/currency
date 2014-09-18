@@ -26,9 +26,12 @@
   "readme": "readme.md",
   "engines": {
     "node": ">=0.6.20"
+  "bugs": {
+    "url": "https://github.com/srn/currency.js/issues"
   },
+  "homepage": "https://github.com/srn/currency.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/soerenr/currency.js.git"
+    "url": "https://github.com/srn/currency.js.git"
   }
 }
