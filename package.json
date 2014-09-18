@@ -1,8 +1,8 @@
 {
-
   "name": "currency",
   "version": "0.0.5",
   "description": "simple currency conversion in the terminal",
+  "main": "currency.js",
   "keywords": [
     "currency",
     "exchange",
@@ -23,9 +23,9 @@
     "url": "http://srn.io"
   },
   "main": "currency.js",
-  "readme": "readme.md",
   "engines": {
     "node": ">=0.6.20"
+  "readme": "README.md",
   "bugs": {
     "url": "https://github.com/srn/currency.js/issues"
   },
