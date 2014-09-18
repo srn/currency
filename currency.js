@@ -16,8 +16,6 @@ module.exports = function(amount, from, to, callback){
 
     var converted = money.convert(amount, {from: from, to: to});
 
-    console.log(converted);
-
     callback(converted);
   });
 };
