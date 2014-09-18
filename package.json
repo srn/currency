@@ -10,7 +10,7 @@
     "convert"
   ],
   "bin": {
-    "currency": "./bin/currency"
+    "currency": "node currency.js"
   },
   "dependencies": {
     "request": "~2.44.0",
