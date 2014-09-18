@@ -1,40 +1,23 @@
-var requirejs = require('requirejs').config({nodeRequire:require, baseUrl:''});
+'use strict';
 
-requirejs(['http', 'commander', 'money'], function (http, commander, money) {
-  var options = {
-    host: 'openexchangerates.org',
-    path: '/api/latest.json?app_id=9c3a9fa4d4b7415e95880e677db3d080'
-  };
+var request = require('request');
+var money = require('money');
 
-  var data = '';
-  http.request(options, function(response){
-    response.on('data', function (chunk) {
-      data += chunk;
-    });
+module.exports = function(amount, from, to, callback){
+  var path = 'https://openexchangerates.org/api/latest.json?app_id=9c3a9fa4d4b7415e95880e677db3d080';
 
-    response.on('end', callback);
-  }).end();
+  from = from ? from.toUpperCase() : 'USD';
+  to = to ? to.toUpperCase() : 'DKK';
 
-  var callback = function(){
-    data = JSON.parse(data);
-    money.base = data.rates;
+  request(path, function (error, response, body) {
+    var data = JSON.parse(body);
+    money.base = data.base;
     money.rates = data.rates;
 
-    commander
-        .version('0.0.4');
+    var converted = money.convert(amount, {from: from, to: to});
 
-    commander
-        .command('* <currency> * [from] * [to]')
-        .description('convert from any currency to any currency')
-        .action(function(currency, from, to){
-          from = from ? from.toUpperCase() : 'USD';
-          to = to ? to.toUpperCase() : 'DKK';
+    console.log(converted);
 
-          var converted = money.convert(currency, {from: from, to: to});
-
-          console.log('=>', converted);
-        });
-
-    commander.parse(process.argv);
-  };
-});
+    callback(converted);
+  });
+};
