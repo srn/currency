@@ -1,28 +1,36 @@
 # currency.js
+>  simple currency conversion in the terminal
 
-Simple currency conversion in the terminal
+## Install
 
-## Installation
-
-```$ npm install currency -g```
+```sh
+$ npm install currency --save
+```
 
 ## Usage
+
+```js
+var currency = require('currency');
+
+currency(10, 'USD', 'DKK', function(converted){
+    console.log(converted);
+
+    => 57.54916
+});
 ```
-$ currency 10 USD DKK
-=> 57.54916
+
+## CLI
+```sh
+$ npm install --global currency
 ```
 
-## LICENSE
-  DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                   Version 2, December 2004
+```sh
+$ currency --help
 
-Copyright (C) 2012 Søren Brokær <root@srn.io>
+  simple currency conversion in the terminal
 
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
+  Example
+    currency 10 USD DKK
 
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
- 0. You just DO WHAT THE FUCK YOU WANT TO.
+    => 57.75516
+```
