@@ -26,7 +26,6 @@
     "url": "http://srn.io"
   },
   "main": "currency.js",
-  "readme": "README.md",
   "bugs": {
     "url": "https://github.com/srn/currency.js/issues"
   },
