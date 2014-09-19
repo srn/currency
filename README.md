@@ -1,4 +1,5 @@
-# currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js)
+# currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js) [![Dependency Status](http://img.shields.io/gemnasium/srn/currency.js.svg?style=flat-square)](https://gemnasium.com/srn/currency.js)
+
 >  simple currency conversion in the terminal
 
 ## Install
