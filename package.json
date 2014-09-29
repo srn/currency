@@ -1,6 +1,6 @@
 {
   "name": "currency",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "simple currency conversion in the terminal",
   "main": "currency.js",
   "keywords": [
@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "currency": "node currency.js"
+    "currency": "cli.js"
   },
   "scripts": {
     "test": "mocha"
