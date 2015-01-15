@@ -25,7 +25,6 @@
     "email": "root@srn.io",
     "url": "http://srn.io"
   },
-  "main": "currency.js",
   "bugs": {
     "url": "https://github.com/srn/currency.js/issues"
   },
