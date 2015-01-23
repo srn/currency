@@ -16,7 +16,7 @@ var currency = require('currency');
 currency(10, 'USD', 'DKK', function(converted){
     console.log(converted);
 
-    => 57.54916
+    // => 57.54916
 });
 ```
 
