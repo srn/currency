@@ -17,8 +17,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "request": "~2.44.0",
-    "money": "~0.2.0"
+    "money": "0.2.0",
+    "request": "2.55.0"
   },
   "author": {
     "name": "Soren Brokaer",
@@ -34,7 +34,7 @@
     "url": "https://github.com/srn/currency.js.git"
   },
   "devDependencies": {
-    "mocha": "~1.21.4",
-    "nock": "~0.47.0"
+    "mocha": "2.2.4",
+    "nock": "1.6.0"
   }
 }
