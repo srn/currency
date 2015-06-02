@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "money": "0.2.0",
-    "request": "2.55.0"
+    "request": "2.57.0"
   },
   "author": {
     "name": "Soren Brokaer",
@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "mocha": "2.2.5",
-    "nock": "2.2.0"
+    "nock": "2.3.0"
   }
 }
