@@ -35,6 +35,6 @@
   },
   "devDependencies": {
     "mocha": "2.2.5",
-    "nock": "2.7.0"
+    "nock": "2.9.1"
   }
 }
