@@ -1,29 +1,14 @@
-# currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js) [![Dependency Status](http://img.shields.io/gemnasium/srn/currency.js.svg?style=flat-square)](https://gemnasium.com/srn/currency.js)
+# currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js)
 
 >  simple currency conversion in the terminal
 
 ## Install
 
 ```sh
-$ npm install currency --save
-```
-
-## Usage
-
-```js
-var currency = require('currency');
-
-currency(10, 'USD', 'DKK', function(converted){
-    console.log(converted);
-
-    // => 57.54916
-});
+$ npm install currency --global
 ```
 
 ## CLI
-```sh
-$ npm install --global currency
-```
 
 ```sh
 $ currency --help
