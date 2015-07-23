@@ -1,6 +1,6 @@
 {
   "name": "currency",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "simple currency conversion in the terminal",
   "main": "index.js",
   "keywords": [
