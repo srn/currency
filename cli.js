@@ -27,6 +27,10 @@ if (argv.indexOf('--version') !== -1) {
   return;
 }
 
-currency(argv[0], argv[1], argv[2], function(converted){
+currency(argv[0], argv[1], argv[2], function(err, converted){
+  if (err) {
+    throw err;
+  }
+
   console.log(converted);
 });

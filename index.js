@@ -12,13 +12,26 @@ module.exports = function (amount, from, to, callback) {
   from = from ? from.toUpperCase() : 'USD';
   to = to ? to.toUpperCase() : 'DKK';
 
-  request(path, function (error, response, body) {
+  request(path, function (err, response, body) {
+    if (err) {
+      return callback(err);
+    }
+
+    // http://theprofoundprogrammer.com/post/25728479232/text-what-the-fuck-kind-of-variable-name-is
     var data = JSON.parse(body);
+
+    if (data.error === true) {
+      return callback(new Error(data.message));
+    }
+
     money.base = data.base;
     money.rates = data.rates;
 
-    var converted = money.convert(amount, {from: from, to: to});
+    var converted = money.convert(amount, {
+      from: from,
+      to: to
+    });
 
-    callback(converted);
+    callback(null, converted);
   });
 };

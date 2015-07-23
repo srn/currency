@@ -2,8 +2,9 @@
 
 var assert = require('assert');
 var nock = require('nock');
-var currency = require('./');
+var childProcess = require('child_process');
 
+var currency = require('./');
 
 var exchangeRates = {
   base: 'USD',
@@ -19,22 +20,64 @@ beforeEach(function(){
     .reply(200, exchangeRates);
 });
 
-describe('currency.js', function(){
-  it('USD to DKK', function(){
-    currency(10, 'USD', 'DKK', function(amount){
+describe('conversion', function(){
+  it('should convert 10 USD to DKK', function(){
+    currency(10, 'USD', 'DKK', function(err, amount){
       assert.equal(amount, 57.75516);
     });
   });
 
-  it('DKK to USD', function(){
-    currency(100, 'DKK', 'USD', function(amount){
+  it('should convert 100 DKK to USD', function(){
+    currency(100, 'DKK', 'USD', function(err, amount){
       assert.equal(amount, 17.314470256856705);
     });
   });
 
-  it('MYR to DKK', function(){
-    currency(100, 'MYR', 'DKK', function(amount){
+  it('should convert 100 MYR to DKK', function(){
+    currency(100, 'MYR', 'DKK', function(err, amount){
       assert.equal(amount, 178.78524192357588);
+    });
+  });
+
+  it('should handle err', function(){
+    var body = {
+      error: true,
+      status: 401,
+      message: 'invalid_app_id'
+    };
+
+    nock.cleanAll();
+    nock('https://openexchangerates.org')
+      .get('/api/latest.json?app_id=a1337')
+      .reply(200, body);
+
+    currency(100, 'MYR', 'DKK', function(err, amount){
+      assert.equal(err.message, body.message);
+      assert.equal(amount, void 0);
+    });
+  });
+});
+
+describe.skip('cli', function () {
+  it('should execute', function (done) {
+    childProcess.execFile('./cli.js', function (err, stdout) {
+      assert.equal(err, null);
+      assert.equal(stdout, 57.75516);
+
+      done();
+    });
+  });
+
+  it('should execute with `app_id` env var', function (done) {
+    process.env.APP_ID = 'a1337';
+
+    childProcess.execFile('./cli.js', function (err, stdout) {
+      assert.equal(err, null);
+      assert.equal(stdout, 57.75516);
+
+      delete process.env.APP_ID;
+
+      done();
     });
   });
 });
