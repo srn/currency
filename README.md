@@ -1,6 +1,6 @@
 # currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js)
 
->  simple currency conversion in the terminal
+>  simple currency conversion cli using openexchangerates.org
 
 ## Install
 
@@ -19,6 +19,14 @@ $ currency --help
     currency 10 USD DKK
 
     => 57.75516
+```
+
+## openexchangerates.org
+
+If the provided `app_id` is for whatever reason not valid anymore just set `APP_ID` as the env var:
+
+```
+$ APP_ID=a1337 currency 10 USD DKK
 ```
 
 ## License
