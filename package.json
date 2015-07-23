@@ -2,7 +2,7 @@
   "name": "currency",
   "version": "0.1.2",
   "description": "simple currency conversion in the terminal",
-  "main": "currency.js",
+  "main": "index.js",
   "keywords": [
     "currency",
     "exchange",
