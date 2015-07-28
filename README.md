@@ -1,6 +1,6 @@
 # currency.js [![Build Status](http://img.shields.io/travis/srn/currency.js.svg?style=flat-square)](https://travis-ci.org/srn/currency.js)
 
->  simple currency conversion cli using openexchangerates.org
+>  simple currency conversion cli using [openexchangerates.org](https://openexchangerates.org/)
 
 ## Install
 
