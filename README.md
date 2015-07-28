@@ -23,7 +23,7 @@ $ currency --help
 
 ## openexchangerates.org
 
-If the provided `OPENEXCHANGERATES_APP_ID` is for whatever reason not valid anymore just set `APP_ID` as the env var:
+If the provided `OPENEXCHANGERATES_APP_ID` is for whatever reason not valid anymore just set `OPENEXCHANGERATES_APP_ID` as the env var:
 
 ```
 $ OPENEXCHANGERATES_APP_ID=a1337 currency 10 USD DKK
