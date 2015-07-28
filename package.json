@@ -1,7 +1,7 @@
 {
   "name": "currency",
   "version": "1.0.0",
-  "description": "simple currency conversion in the terminal",
+  "description": "simple currency conversion cli using openexchangerates.org",
   "main": "index.js",
   "keywords": [
     "currency",
@@ -26,12 +26,12 @@
     "url": "http://srn.io"
   },
   "bugs": {
-    "url": "https://github.com/srn/currency.js/issues"
+    "url": "https://github.com/srn/currency/issues"
   },
-  "homepage": "https://github.com/srn/currency.js",
+  "homepage": "https://github.com/srn/currency",
   "repository": {
     "type": "git",
-    "url": "https://github.com/srn/currency.js.git"
+    "url": "https://github.com/srn/currency.git"
   },
   "devDependencies": {
     "mocha": "2.2.5",
