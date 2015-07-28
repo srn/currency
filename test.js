@@ -57,27 +57,3 @@ describe('conversion', function(){
     });
   });
 });
-
-describe.skip('cli', function () {
-  it('should execute', function (done) {
-    childProcess.execFile('./cli.js', function (err, stdout) {
-      assert.equal(err, null);
-      assert.equal(stdout, 57.75516);
-
-      done();
-    });
-  });
-
-  it('should execute with `app_id` env var', function (done) {
-    process.env.APP_ID = 'a1337';
-
-    childProcess.execFile('./cli.js', function (err, stdout) {
-      assert.equal(err, null);
-      assert.equal(stdout, 57.75516);
-
-      delete process.env.APP_ID;
-
-      done();
-    });
-  });
-});
