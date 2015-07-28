@@ -3,7 +3,7 @@
 var request = require('request');
 var money = require('money');
 
-var appId = process.env.APP_ID || '9c3a9fa4d4b7415e95880e677db3d080';
+var appId = process.env.OPENEXCHANGERATES_APP_ID || '9c3a9fa4d4b7415e95880e677db3d080';
 
 module.exports = function (amount, from, to, callback) {
   var path = 'https://openexchangerates.org/api/latest.json?app_id=' + appId;
