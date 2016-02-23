@@ -27,10 +27,14 @@ if (argv.indexOf('--version') !== -1) {
   return;
 }
 
-currency(argv[0], argv[1], argv[2], function(err, converted){
-  if (err) {
-    throw err;
-  }
+var opts = {
+  amount: argv[0],
+  from: argv[1],
+  to: argv[2]
+};
 
-  console.log(converted);
+currency(opts).then(console.log).catch(err => {
+  console.log(err);
+
+  process.exit(1);
 });

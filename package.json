@@ -17,8 +17,8 @@
     "test": "mocha"
   },
   "dependencies": {
+    "got": "6.1.1",
     "money": "0.2.0",
-    "request": "2.60.0"
   },
   "author": {
     "name": "Soren Brokaer",

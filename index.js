@@ -1,37 +1,33 @@
 'use strict';
 
-var request = require('request');
-var money = require('money');
+const got = require('got');
+const money = require('money');
 
-var appId = process.env.OPENEXCHANGERATES_APP_ID || '9c3a9fa4d4b7415e95880e677db3d080';
+const APP_ID = process.env.OPENEXCHANGERATES_APP_ID || 'ead040886c774aa5824508a084181ecb';
+const path = `https://openexchangerates.org/api/latest.json?app_id=${APP_ID}`;
 
-module.exports = function (amount, from, to, callback) {
-  var path = 'https://openexchangerates.org/api/latest.json?app_id=' + appId;
+module.exports = (opts) => {
+  if (opts.amount === void 0) {
+    opts.amount = 1;
+  }
 
-  amount = amount || 10;
-  from = from ? from.toUpperCase() : 'USD';
-  to = to ? to.toUpperCase() : 'DKK';
+  if (opts.from === void 0) {
+    opts.from = 'usd';
+  }
 
-  request(path, function (err, response, body) {
-    if (err) {
-      return callback(err);
-    }
+  if (opts.to === void 0) {
+    opts.to = 'dkk';
+  }
 
-    // http://theprofoundprogrammer.com/post/25728479232/text-what-the-fuck-kind-of-variable-name-is
-    var data = JSON.parse(body);
+  return got(path, {json:true}).then(response => {
+    money.base = response.body.base;
+    money.rates = response.body.rates;
 
-    if (data.error === true) {
-      return callback(new Error(data.message));
-    }
-
-    money.base = data.base;
-    money.rates = data.rates;
-
-    var converted = money.convert(amount, {
-      from: from,
-      to: to
+    const converted = money.convert(opts.amount, {
+      from: opts.from.toUpperCase(),
+      to: opts.to.toUpperCase()
     });
 
-    callback(null, converted);
+    return Number(converted.toFixed(3));
   });
 };
