@@ -14,7 +14,7 @@
     "currency": "cli.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "ava -v"
   },
   "dependencies": {
     "got": "6.1.1",
@@ -35,7 +35,7 @@
     "url": "https://github.com/srn/currency.git"
   },
   "devDependencies": {
-    "mocha": "2.2.5",
-    "nock": "2.9.1"
+    "ava": "0.12.0",
+    "nock": "7.2.2"
   }
 }
