@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ npm install currency --global
+$ npm i currency -g
 ```
 
 ## CLI
