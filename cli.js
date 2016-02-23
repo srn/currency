@@ -11,7 +11,7 @@ function help() {
       '  ' + pkg.description,
     '',
     '  Example',
-    '    currency 10 USD DKK',
+    '    currency 10 usd dkk',
     '',
       '    => 57.75516'
   ].join('\n'));

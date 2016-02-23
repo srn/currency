@@ -16,7 +16,7 @@ $ currency --help
   simple currency conversion in the terminal
 
   Example
-    currency 10 USD DKK
+    currency 10 usd dkk
 
     => 57.75516
 ```
