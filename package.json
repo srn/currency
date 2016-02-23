@@ -19,6 +19,7 @@
   "dependencies": {
     "got": "6.1.1",
     "money": "0.2.0",
+    "update-notifier": "0.6.0"
   },
   "author": {
     "name": "Soren Brokaer",

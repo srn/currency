@@ -5,6 +5,9 @@ var pkg = require('./package.json');
 var currency = require('./');
 var argv = process.argv.slice(2);
 
+const updateNotifier = require('update-notifier');
+updateNotifier({pkg}).notify();
+
 function help() {
   console.log([
     '',
