@@ -12,8 +12,8 @@ test.beforeEach(t => {
     }
   };
 
-  nock('https://openexchangerates.org')
-    .get('/api/latest.json?app_id=ead040886c774aa5824508a084181ecb')
+  nock('https://api.fixer.io')
+    .get('/latest')
     .reply(200, exchangeRates);
 });
 

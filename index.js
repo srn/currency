@@ -3,8 +3,7 @@
 const got = require('got');
 const money = require('money');
 
-const APP_ID = process.env.OPENEXCHANGERATES_APP_ID || 'ead040886c774aa5824508a084181ecb';
-const path = `https://openexchangerates.org/api/latest.json?app_id=${APP_ID}`;
+const path = 'https://api.fixer.io/latest';
 
 module.exports = (opts) => {
   if (opts.amount === void 0) {
