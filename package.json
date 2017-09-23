@@ -35,7 +35,7 @@
     "url": "https://github.com/srn/currency.git"
   },
   "devDependencies": {
-    "nock": "7.2.2"
     "ava": "0.22.0",
+    "nock": "9.0.19"
   }
 }
