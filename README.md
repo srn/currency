@@ -38,10 +38,6 @@ $ currency --help
     => 500 USD = 1.767971429581698 ETH
 ```
 
-## API
-
-
-
 ## License
 
 MIT © [Søren Brokær](http://srn.io)
