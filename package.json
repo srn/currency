@@ -1,13 +1,15 @@
 {
   "name": "currency",
   "version": "3.0.0",
-  "description": "simple currency conversion cli using openexchangerates.org",
+  "description": "simple currency conversion cli",
   "main": "index.js",
   "keywords": [
     "currency",
     "exchange",
     "rates",
-    "convert"
+    "convert",
+    "bitcoin",
+    "etherum"
   ],
   "license": "MIT",
   "bin": {
