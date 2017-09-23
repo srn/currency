@@ -1,43 +1,48 @@
 #!/usr/bin/env node
-'use strict';
 
-var pkg = require('./package.json');
-var currency = require('./');
-var argv = process.argv.slice(2);
+const currency = require('./')
+const argv = process.argv.slice(2)
 
-const updateNotifier = require('update-notifier');
-updateNotifier({pkg}).notify();
+const updateNotifier = require('update-notifier')
+const pkg = require('./package.json')
+
+updateNotifier({pkg}).notify()
 
 function help() {
   console.log([
     '',
-      '  ' + pkg.description,
+    '  ' + pkg.description,
     '',
     '  Example',
-    '    currency 10 usd dkk',
+    '    $ currency 10 usd dkk',
+    '    => 10 USD = 62.208 DKK',
     '',
-      '    => 57.75516'
-  ].join('\n'));
+    '  See readme.md for detailed usage.'
+  ].join('\n'))
 }
 
 if (argv.indexOf('--help') !== -1) {
-  help();
-  return;
+  help()
+  return
 }
 
 if (argv.indexOf('--version') !== -1) {
-  console.log(pkg.version);
-  return;
+  console.log(pkg.version)
+  return
 }
 
-var opts = {
-  amount: argv[0],
-  from: argv[1],
-  to: argv[2]
-};
+let opts = {
+  amount: argv[0] || 1,
+  from: (argv[1] || 'USD').toUpperCase(),
+  to: (argv[2] || 'BTC').toUpperCase()
+}
 
-currency(opts).then(console.log).catch(err => {
-  console.log(err);
+currency(opts)
+  .then(result => {
+    console.log(`${opts.amount} ${opts.from} = ${result} ${opts.to}`)
+  })
+  .catch(err => {
+    console.log(err)
 
-  process.exit(1);
-});
+    process.exit(1)
+  })
