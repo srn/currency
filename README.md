@@ -2,6 +2,8 @@
 
 > simple currency conversion cli using [fixer.io](http://fixer.io), [blockchain.info](https://blockchain.info) and [etherchain.org](https://etherchain.org)
 
+![screenshot.gif](screenshot.gif)
+
 ## Install
 
 ```sh
